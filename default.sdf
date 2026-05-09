@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+  <world name="default">
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <scene>
+      <grid>false</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal><size>1 1</size></plane></geometry>
+          <surface><friction><ode/></friction><bounce/><contact/></surface>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>500 500</size></plane></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse><specular>0.8 0.8 0.8 1</specular></material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial><pose>0 0 0 0 -0 0</pose><mass>1</mass><inertia><ixx>1</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1</iyy><iyz>0</iyz><izz>1</izz></inertia></inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+
+    <model name="m_0">
+      <static>true</static>
+      <pose>69.4 -23.7 0.0030 0 0 2.31</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.4 6.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.4 6.1 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.46 0.12 1</ambient><diffuse>0.28 0.51 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_1">
+      <static>true</static>
+      <pose>72.5 19.6 0.0030 0 0 0.09</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.4 7.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.4 7.1 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.46 0.12 1</ambient><diffuse>0.28 0.51 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_2">
+      <static>true</static>
+      <pose>33.6 0.3 0.0030 0 0 2.04</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.1 6.0 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.1 6.0 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.51 0.12 1</ambient><diffuse>0.31 0.56 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_3">
+      <static>true</static>
+      <pose>61.3 -14.0 0.0030 0 0 0.02</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.9 9.0 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.9 9.0 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_4">
+      <static>true</static>
+      <pose>83.5 9.9 0.0030 0 0 3.01</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.7 5.8 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.7 5.8 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.44 0.12 1</ambient><diffuse>0.27 0.49 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_5">
+      <static>true</static>
+      <pose>43.6 -20.4 0.0030 0 0 1.90</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.5 9.2 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.5 9.2 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.49 0.12 1</ambient><diffuse>0.30 0.54 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_6">
+      <static>true</static>
+      <pose>61.9 16.5 0.0030 0 0 1.81</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.1 9.3 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.1 9.3 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_7">
+      <static>true</static>
+      <pose>34.8 -19.9 0.0030 0 0 1.15</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.4 8.2 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.4 8.2 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.50 0.12 1</ambient><diffuse>0.30 0.55 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_8">
+      <static>true</static>
+      <pose>99.1 7.0 0.0030 0 0 2.65</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.8 8.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.8 8.4 0.0060</size></box></geometry>
+          <material><ambient>0.21 0.43 0.12 1</ambient><diffuse>0.26 0.48 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_9">
+      <static>true</static>
+      <pose>81.0 -13.5 0.0030 0 0 0.84</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.2 6.6 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.2 6.6 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.45 0.12 1</ambient><diffuse>0.28 0.50 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_10">
+      <static>true</static>
+      <pose>32.9 22.1 0.0030 0 0 2.06</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>9.4 6.6 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>9.4 6.6 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.50 0.12 1</ambient><diffuse>0.30 0.55 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_11">
+      <static>true</static>
+      <pose>48.6 20.7 0.0030 0 0 0.77</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.3 6.3 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.3 6.3 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.48 0.12 1</ambient><diffuse>0.29 0.53 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_12">
+      <static>true</static>
+      <pose>24.3 6.4 0.0030 0 0 0.20</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>9.0 7.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>9.0 7.1 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.52 0.12 1</ambient><diffuse>0.31 0.57 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_13">
+      <static>true</static>
+      <pose>89.4 -11.8 0.0030 0 0 2.87</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.5 5.9 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.5 5.9 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.44 0.12 1</ambient><diffuse>0.27 0.49 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_14">
+      <static>true</static>
+      <pose>79.8 2.0 0.0030 0 0 0.00</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.9 7.7 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.9 7.7 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.45 0.12 1</ambient><diffuse>0.28 0.50 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_15">
+      <static>true</static>
+      <pose>55.4 2.5 0.0030 0 0 1.33</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.3 9.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.3 9.4 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.48 0.12 1</ambient><diffuse>0.29 0.53 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_16">
+      <static>true</static>
+      <pose>34.1 -8.1 0.0030 0 0 0.69</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.9 6.2 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.9 6.2 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.51 0.12 1</ambient><diffuse>0.31 0.56 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_17">
+      <static>true</static>
+      <pose>21.0 -13.1 0.0030 0 0 0.42</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.3 6.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.3 6.1 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.52 0.12 1</ambient><diffuse>0.31 0.57 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_18">
+      <static>true</static>
+      <pose>50.9 -11.1 0.0030 0 0 1.39</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.2 9.6 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.2 9.6 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.48 0.12 1</ambient><diffuse>0.30 0.53 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_19">
+      <static>true</static>
+      <pose>97.4 21.3 0.0030 0 0 1.52</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>9.2 5.8 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>9.2 5.8 0.0060</size></box></geometry>
+          <material><ambient>0.21 0.43 0.12 1</ambient><diffuse>0.26 0.48 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_20">
+      <static>true</static>
+      <pose>37.5 14.2 0.0030 0 0 3.01</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.3 7.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.3 7.1 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.50 0.12 1</ambient><diffuse>0.30 0.55 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_21">
+      <static>true</static>
+      <pose>64.7 0.1 0.0030 0 0 3.02</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>9.3 5.8 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>9.3 5.8 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_22">
+      <static>true</static>
+      <pose>99.7 -21.3 0.0030 0 0 2.93</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.1 6.3 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.1 6.3 0.0060</size></box></geometry>
+          <material><ambient>0.21 0.42 0.12 1</ambient><diffuse>0.26 0.47 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_23">
+      <static>true</static>
+      <pose>90.2 -4.7 0.0030 0 0 2.92</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.1 5.8 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.1 5.8 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.44 0.12 1</ambient><diffuse>0.27 0.49 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_24">
+      <static>true</static>
+      <pose>88.5 23.3 0.0030 0 0 1.25</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.4 8.2 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.4 8.2 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.44 0.12 1</ambient><diffuse>0.27 0.49 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_25">
+      <static>true</static>
+      <pose>24.1 -3.7 0.0030 0 0 1.63</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.9 9.8 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.9 9.8 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.52 0.12 1</ambient><diffuse>0.31 0.57 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_26">
+      <static>true</static>
+      <pose>100.0 -7.5 0.0030 0 0 2.05</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.3 8.9 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.3 8.9 0.0060</size></box></geometry>
+          <material><ambient>0.21 0.42 0.12 1</ambient><diffuse>0.26 0.47 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_27">
+      <static>true</static>
+      <pose>79.1 22.5 0.0030 0 0 0.48</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.0 5.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.0 5.1 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.45 0.12 1</ambient><diffuse>0.28 0.50 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_28">
+      <static>true</static>
+      <pose>73.8 -9.7 0.0030 0 0 1.67</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.9 7.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.9 7.4 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.46 0.12 1</ambient><diffuse>0.28 0.51 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_29">
+      <static>true</static>
+      <pose>51.2 12.3 0.0030 0 0 0.85</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.7 8.5 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.7 8.5 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.48 0.12 1</ambient><diffuse>0.29 0.53 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_30">
+      <static>true</static>
+      <pose>71.1 -17.1 0.0030 0 0 0.01</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.9 5.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.9 5.4 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.46 0.12 1</ambient><diffuse>0.28 0.51 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_31">
+      <static>true</static>
+      <pose>21.8 -23.0 0.0030 0 0 0.79</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.2 6.6 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.2 6.6 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.51 0.12 1</ambient><diffuse>0.31 0.56 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_32">
+      <static>true</static>
+      <pose>22.8 23.1 0.0030 0 0 2.99</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>9.2 7.9 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>9.2 7.9 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.51 0.12 1</ambient><diffuse>0.31 0.56 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_33">
+      <static>true</static>
+      <pose>57.1 -23.1 0.0030 0 0 2.73</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.5 8.0 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.5 8.0 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_34">
+      <static>true</static>
+      <pose>89.2 -23.2 0.0030 0 0 2.89</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.3 8.2 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.3 8.2 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.43 0.12 1</ambient><diffuse>0.27 0.48 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_35">
+      <static>true</static>
+      <pose>47.7 -0.8 0.0030 0 0 1.80</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.2 7.9 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.2 7.9 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.49 0.12 1</ambient><diffuse>0.30 0.54 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_36">
+      <static>true</static>
+      <pose>70.6 9.6 0.0030 0 0 0.96</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.3 5.6 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.3 5.6 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.46 0.12 1</ambient><diffuse>0.28 0.51 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_37">
+      <static>true</static>
+      <pose>80.8 -23.5 0.0030 0 0 1.54</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.4 10.0 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.4 10.0 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.44 0.12 1</ambient><diffuse>0.27 0.49 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_38">
+      <static>true</static>
+      <pose>26.7 13.7 0.0030 0 0 3.12</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.8 5.7 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.8 5.7 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.51 0.12 1</ambient><diffuse>0.31 0.56 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_39">
+      <static>true</static>
+      <pose>91.5 13.0 0.0030 0 0 1.29</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.2 5.0 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.2 5.0 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.43 0.12 1</ambient><diffuse>0.27 0.48 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_40">
+      <static>true</static>
+      <pose>41.0 2.6 0.0030 0 0 2.64</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.9 8.0 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.9 8.0 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.50 0.12 1</ambient><diffuse>0.30 0.55 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_41">
+      <static>true</static>
+      <pose>62.0 24.8 0.0030 0 0 2.41</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.4 5.5 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.4 5.5 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_42">
+      <static>true</static>
+      <pose>91.1 5.2 0.0030 0 0 1.88</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.9 7.7 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.9 7.7 0.0060</size></box></geometry>
+          <material><ambient>0.22 0.44 0.12 1</ambient><diffuse>0.27 0.49 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_43">
+      <static>true</static>
+      <pose>15.8 14.2 0.0030 0 0 2.10</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8.0 5.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8.0 5.4 0.0060</size></box></geometry>
+          <material><ambient>0.27 0.52 0.12 1</ambient><diffuse>0.32 0.57 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_44">
+      <static>true</static>
+      <pose>34.2 7.4 0.0030 0 0 0.77</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6.1 5.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6.1 5.1 0.0060</size></box></geometry>
+          <material><ambient>0.26 0.51 0.12 1</ambient><diffuse>0.31 0.56 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_45">
+      <static>true</static>
+      <pose>49.9 -24.5 0.0030 0 0 2.45</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.6 9.3 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.6 9.3 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.48 0.12 1</ambient><diffuse>0.29 0.53 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_46">
+      <static>true</static>
+      <pose>62.2 -6.0 0.0030 0 0 1.49</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.8 5.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.8 5.4 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_47">
+      <static>true</static>
+      <pose>41.3 23.6 0.0030 0 0 2.66</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.9 6.3 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.9 6.3 0.0060</size></box></geometry>
+          <material><ambient>0.25 0.49 0.12 1</ambient><diffuse>0.30 0.54 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_48">
+      <static>true</static>
+      <pose>63.0 7.1 0.0030 0 0 0.24</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>7.3 6.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>7.3 6.4 0.0060</size></box></geometry>
+          <material><ambient>0.24 0.47 0.12 1</ambient><diffuse>0.29 0.52 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_49">
+      <static>true</static>
+      <pose>17.3 -4.6 0.0030 0 0 0.80</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.2 6.6 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.2 6.6 0.0060</size></box></geometry>
+          <material><ambient>0.27 0.53 0.12 1</ambient><diffuse>0.32 0.58 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_50">
+      <static>true</static>
+      <pose>81.6 -7.0 0.0030 0 0 2.12</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.6 5.4 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.6 5.4 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.45 0.12 1</ambient><diffuse>0.28 0.50 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="m_51">
+      <static>true</static>
+      <pose>78.6 16.1 0.0030 0 0 2.24</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5.5 5.1 0.0060</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5.5 5.1 0.0060</size></box></geometry>
+          <material><ambient>0.23 0.45 0.12 1</ambient><diffuse>0.28 0.50 0.15 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <light name="sunUTC" type="directional">
+      <pose>0 0 500 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation><range>2000</range><linear>0</linear><constant>1</constant><quadratic>0</quadratic></attenuation>
+      <spot><inner_angle>0</inner_angle><outer_angle>0</outer_angle><falloff>0</falloff></spot>
+    </light>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg> 8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+  </world>
+</sdf>
